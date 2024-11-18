@@ -37,6 +37,11 @@ function Login() {
     }
   };
 
+  const handleGoogleLogin = () => {
+    // Redirect to backend Google login endpoint
+    window.location.href = "http://localhost:5000/api/auth/google-login";
+  };
+
   return (
     <div className="login-container">
       <div className="login-form">
@@ -72,6 +77,9 @@ function Login() {
         </form>
         <button className="switch-button" onClick={() => setIsSignUp(!isSignUp)}>
           {isSignUp ? 'Switch to Login' : 'Switch to Sign Up'}
+        </button>
+        <button className="google-login-button" onClick={handleGoogleLogin}>
+          Login with Google
         </button>
         {message && <p>{message}</p>}
       </div>
