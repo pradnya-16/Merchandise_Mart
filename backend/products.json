@@ -1,0 +1,178 @@
+[
+    {
+      "id": 1,
+      "name": "T-shirt1",
+      "price": 15.00,
+      "imageUrl": "frontend/public/images/tshirt1.jpg",
+      "category": "Clothing"
+    },
+    {
+        "id": 2,
+        "name": "T-shirt2",
+        "price": 15.00,
+        "imageUrl": "frontend/public/images/tshirt2.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 3,
+        "name": "T-shirt3",
+        "price": 15.00,
+        "imageUrl": "frontend/public/images/tshirt3.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 4,
+        "name": "T-shirt4",
+        "price": 15.00,
+        "imageUrl": "frontend/public/images/tshirt4.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 5,
+        "name": "T-shirt5",
+        "price": 15.00,
+        "imageUrl": "frontend/public/images/tshirt5.jpg",
+        "category": "Clothing"
+      },
+    {
+      "id": 6,
+      "name": "Hoodie1",
+      "price": 30.00,
+      "imageUrl": "frontend/public/images/hoodie1.jpg",
+      "category": "Clothing"
+    },
+    {
+        "id": 7,
+        "name": "Hoodie2",
+        "price": 30.00,
+        "imageUrl": "frontend/public/images/hoodie2.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 8,
+        "name": "Hoodie3",
+        "price": 30.00,
+        "imageUrl": "frontend/public/images/hoodie3.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 9,
+        "name": "Hoodie4",
+        "price": 30.00,
+        "imageUrl": "frontend/public/images/hoodie4.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 10,
+        "name": "Hoodie5",
+        "price": 30.00,
+        "imageUrl": "frontend/public/images/hoodie5.jpg",
+        "category": "Clothing"
+      },
+    {
+      "id": 11,
+      "name": "Sweatshirt1",
+      "price": 25.00,
+      "imageUrl": "frontend/public/images/sweatshirt1.jpg",
+      "category": "Clothing"
+    },
+    {
+        "id": 12,
+        "name": "Sweatshirt2",
+        "price": 25.00,
+        "imageUrl": "frontend/public/images/sweatshirt2.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 13,
+        "name": "Sweatshirt3",
+        "price": 25.00,
+        "imageUrl": "frontend/public/images/sweatshirt3.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 14,
+        "name": "Sweatshirt4",
+        "price": 25.00,
+        "imageUrl": "frontend/public/images/sweatshirt4.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 15,
+        "name": "Sweatshirt5",
+        "price": 25.00,
+        "imageUrl": "frontend/public/images/sweatshirt5.jpg",
+        "category": "Clothing"
+      },
+    {
+        "id": 16,
+        "name": "Jogger1",
+        "price": 20.00,
+        "imageUrl": "frontend/public/images/jogger1.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 17,
+        "name": "Jogger2",
+        "price": 20.00,
+        "imageUrl": "frontend/public/images/jogger2.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 18,
+        "name": "Jogger3",
+        "price": 20.00,
+        "imageUrl": "frontend/public/images/jogger3.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 19,
+        "name": "Jogger4",
+        "price": 20.00,
+        "imageUrl": "frontend/public/images/jogger4.jpg",
+        "category": "Clothing"
+      },
+      {
+        "id": 20,
+        "name": "Jogger5",
+        "price": 20.00,
+        "imageUrl": "frontend/public/images/jogger5.jpg",
+        "category": "Clothing"
+      },
+    {
+      "id": 21,
+      "name": "Accessory1",
+      "price": 10.00,
+      "imageUrl": "frontend/public/images/accessory1.jpg",
+      "category": "Accessories"
+    },
+    {
+        "id": 22,
+        "name": "Accessory2",
+        "price": 10.00,
+        "imageUrl": "frontend/public/images/accessory2.jpg",
+        "category": "Accessories"
+      },
+      {
+        "id": 23,
+        "name": "Accessory3",
+        "price": 10.00,
+        "imageUrl": "frontend/public/images/accessory3.jpg",
+        "category": "Accessories"
+      },
+      {
+        "id": 24,
+        "name": "Accessory4",
+        "price": 10.00,
+        "imageUrl": "frontend/public/images/accessory4.jpg",
+        "category": "Accessories"
+      },
+      {
+        "id": 25,
+        "name": "Accessory5",
+        "price": 10.00,
+        "imageUrl": "frontend/public/images/accessory5.jpg",
+        "category": "Accessories"
+      }
+  ]
+  
