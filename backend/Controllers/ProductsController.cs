@@ -20,8 +20,7 @@ public class ProductsController : ControllerBase
     [HttpGet]
     public IActionResult GetProducts()
     {
-        var products = _context.Products.ToList();
-        return Ok(products);
+        return Ok(_context.Products.ToList());
     }
 
     [HttpPost]

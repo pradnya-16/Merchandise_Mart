@@ -15,17 +15,25 @@ function Login() {
     e.preventDefault();
     try {
       if (isSignUp) {
-        // Call register API
-        const response = await registerUser(formData);
+        // Map `name` to `fullName` for backend compatibility
+        const payload = {
+          fullName: formData.name,
+          email: formData.email,
+          password: formData.password,
+        };
+        const response = await registerUser(payload); // Call register API
         setMessage(response.data); // Show success message
       } else {
-        // Call login API
-        const response = await loginUser({ email: formData.email, password: formData.password });
+        const payload = {
+          email: formData.email,
+          password: formData.password,
+        };
+        const response = await loginUser(payload); // Call login API
         setMessage('Login successful!');
         localStorage.setItem('token', response.data.Token); // Save token to localStorage
       }
     } catch (error) {
-      setMessage(error.response?.data || 'An error occurred');
+      setMessage(error.response?.data || 'An error occurred'); // Display error message
     }
   };
 

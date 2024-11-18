@@ -8,10 +8,15 @@ import Login from './components/Login';
 import Cart from './components/Cart';
 import About from './components/About';
 import Checkout from './components/Checkout';
-import Payment from './components/Payment';
-import './styles.css';
 import ProductList from './components/ProductList';
 import ProductDetails from './components/ProductDetails';
+import Payment from './components/Payment';
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import './styles.css';
+
+// Load Stripe
+const stripePromise = loadStripe("pk_test_51QMcBgELN7EfHzd3PuMN61SJzcRKjeVSdWcPrHdCc7sekN2tpGqKdyHYANvQtOJFvasBy8cQ2jEt0XBJslYob6Pd00d0C6coWb"); // Replace with your Stripe Publishable Key
 
 function App() {
   return (
@@ -25,10 +30,16 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="/" element={<ProductList />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/payment" element={<Payment />} />
+          <Route path="/product" element={<ProductList />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route
+            path="/payment"
+            element={
+              <Elements stripe={stripePromise}>
+                <Payment totalAmount={100} /> {}
+              </Elements>
+            }
+          />
         </Routes>
       </div>
     </Router>

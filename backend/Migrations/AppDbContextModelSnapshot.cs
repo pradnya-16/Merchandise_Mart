@@ -62,10 +62,6 @@ namespace backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -84,27 +80,178 @@ namespace backend.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
-                            Description = "Comfortable cotton T-shirt",
-                            ImageUrl = "/images/tshirt1.jpg",
-                            Name = "T-shirt",
-                            Price = 15.99m
+                            Id = -1,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
                         },
                         new
                         {
-                            Id = 2,
-                            Description = "Warm hoodie for winter",
-                            ImageUrl = "/images/hoodie1.jpg",
-                            Name = "Hoodie",
-                            Price = 25.99m
+                            Id = -2,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
                         },
                         new
                         {
-                            Id = 3,
-                            Description = "Stylish accessory",
-                            ImageUrl = "/images/accessory1.jpg",
-                            Name = "Accessory",
-                            Price = 5.99m
+                            Id = -3,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -4,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -5,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -6,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -7,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -8,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -9,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -10,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -11,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -12,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -13,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -14,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -15,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -16,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -17,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -18,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -19,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -20,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -21,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -22,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -23,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -24,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
+                        },
+                        new
+                        {
+                            Id = -25,
+                            ImageUrl = "",
+                            Name = "",
+                            Price = 0m
                         });
                 });
 
@@ -133,16 +280,6 @@ namespace backend.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Email = "defaultuser@example.com",
-                            FullName = "Default User",
-                            PasswordHash = "$2a$11$Shk8aY8Tit6yKv.Xb2BL4.1myHfjqSLacIYjGbNYX3BOrnk0ynD5u",
-                            Role = "User"
-                        });
                 });
 
             modelBuilder.Entity("OrderItem", b =>

@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json; // Required for JSON deserialization
+using System.Text.Json;
 using System.IO;
-
 
 public class AppDbContext : DbContext
 {
@@ -12,22 +11,36 @@ public class AppDbContext : DbContext
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    // Configure Product entity
+    modelBuilder.Entity<Product>(entity =>
     {
-        // Seed default user
-        modelBuilder.Entity<User>().HasData(
-            new User { Id = 1, FullName = "Default User", Email = "defaultuser@example.com", PasswordHash = BCrypt.Net.BCrypt.HashPassword("password123"), Role = "User" }
-        );
+        entity.HasKey(p => p.Id);
+        entity.Property(p => p.Name).IsRequired();
+        entity.Property(p => p.Price).IsRequired();
+        entity.Property(p => p.ImageUrl).IsRequired();
+    });
 
-        // Seed default products
-        modelBuilder.Entity<Product>().HasData(
-            new Product { Id = 1, Name = "T-shirt", Price = 15.99M, Description = "Comfortable cotton T-shirt", ImageUrl = "/images/tshirt1.jpg" },
-            new Product { Id = 2, Name = "Hoodie", Price = 25.99M, Description = "Warm hoodie for winter", ImageUrl = "/images/hoodie1.jpg" },
-            new Product { Id = 3, Name = "Accessory", Price = 5.99M, Description = "Stylish accessory", ImageUrl = "/images/accessory1.jpg" }
-            // Add more products as needed
-        );
+    // Load and seed products from JSON
+    var productsFilePath = Path.Combine(Directory.GetCurrentDirectory(), "products.json");
+    Console.WriteLine($"Looking for products.json at: {productsFilePath}");
 
-        base.OnModelCreating(modelBuilder);
+    if (File.Exists(productsFilePath))
+    {
+        var products = JsonSerializer.Deserialize<List<Product>>(File.ReadAllText(productsFilePath));
+        if (products != null)
+        {
+            int id = -1; // Start IDs at -1
+            foreach (var product in products)
+            {
+                product.Id = id--; // Assign negative IDs
+            }
+            modelBuilder.Entity<Product>().HasData(products);
+        }
+    }
+    else
+    {
+        Console.WriteLine("products.json not found!");
     }
 }
-
-
+}
