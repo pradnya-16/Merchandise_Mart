@@ -39,7 +39,7 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
-        policy.WithOrigins("http://localhost:3000/login") // Your React app's origin
+        policy.WithOrigins("http://localhost:3000") // Your React app's origin
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials(); // Allow cookies and authorization headers
