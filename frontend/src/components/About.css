@@ -1,0 +1,46 @@
+/* About Container */
+.about-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Heading Style */
+  .about-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Paragraph Style */
+  .about-container p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  /* Highlight */
+  .about-container p span {
+    color: #ff6347; /* Add emphasis to key terms with a bold color */
+    font-weight: bold;
+  }
+  
+  /* Background Effect */
+  .about-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 10px;
+    background-color: #ff6347; /* Decorative stripe at the top */
+    border-radius: 8px 8px 0 0;
+  }
+  

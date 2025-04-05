@@ -1,0 +1,38 @@
+/* Home Container */
+.home-container {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Heading Styling */
+  .home-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Heading Underline Decoration */
+  .home-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    width: 50%;
+    height: 4px;
+    background-color: #ff6347; /* Tomato color */
+    border-radius: 2px;
+  }
+  
+  /* Product List Styling */
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
