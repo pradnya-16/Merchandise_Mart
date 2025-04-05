@@ -2,7 +2,7 @@
 
 Merchandise Mart is a full-stack e-commerce web application that allows users to browse products, view details, and proceed with checkout. It features user authentication, JWT-based protected routes, and a polished frontend built with React. The backend is powered by ASP.NET Core with a SQLite database and RESTful APIs.
 
-🌐 **Live Demo:** [[https://merchandise-mart-udib.onrender.com](https://merchandise-mart-udib.onrender.com)](https://merchandise-mart-o1s9.onrender.com/)
+🌐 **Live Demo:** https://merchandise-mart-o1s9.onrender.com/
 
 ---
 
