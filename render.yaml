@@ -1,8 +1,6 @@
 services:
   - type: web
     name: merchandise-mart
-    env: dotnet
-    rootDir: backend
-    buildCommand: dotnet build
-    startCommand: dotnet run
+    env: docker
     plan: free
+    dockerfilePath: backend/Dockerfile
