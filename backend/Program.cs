@@ -58,6 +58,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseDefaultFiles(); // This looks for index.html by default
+app.UseStaticFiles();
 
 app.UseCors();
 app.UseHttpsRedirection();
@@ -65,5 +67,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapFallbackToFile("index.html");
 
 app.Run();
