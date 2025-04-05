@@ -9,7 +9,7 @@ public class PaymentsController : ControllerBase
     [HttpPost("create-payment-intent")]
 public async Task<IActionResult> CreatePaymentIntent([FromBody] PaymentRequest request)
 {
-    StripeConfiguration.ApiKey = "sk_test_51QMcBgELN7EfHzd3PSRUO37EY5M3F9uMs5Vn8MfMJBTRcjT2AsBoGzXtCHeIm898xdXKC4CBzlAeivxQyms9UJ90006GKjJb21"; // Replace with your Stripe secret key
+    StripeConfiguration.ApiKey = "sk_test_51QMcBgELN7EfHzd3PSRUO37EY5M3F9uMs5Vn8MfMJBTRcjT2AsBoGzXtCHeIm898xdXKC4CBzlAeivxQyms9UJ90006GKjJb21"; 
 
     try
     {
