@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# 🛍️ Merchandise Mart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Merchandise Mart is a full-stack e-commerce web application that allows users to browse products, view details, and proceed with checkout. It features user authentication, JWT-based protected routes, and a polished frontend built with React. The backend is powered by ASP.NET Core with a SQLite database and RESTful APIs.
 
-## Available Scripts
+🌐 **Live Demo:** [https://merchandise-mart-udib.onrender.com](https://merchandise-mart-udib.onrender.com)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🖼️ Frontend (React)
+- Product listings with images and details
+- Add to cart and checkout functionality
+- Responsive design with clean UI
+- Protected routes using context/auth
+- Google OAuth integration (optional)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ⚙️ Backend (.NET Core 8.0)
+- RESTful API using ASP.NET Core Web API
+- SQLite database with Entity Framework Core
+- JWT-based authentication system
+- Swagger API documentation
+- CORS configured for frontend/backend communication
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧱 Tech Stack
 
-### `npm run build`
+| Layer      | Technology                          |
+|------------|-------------------------------------|
+| Frontend   | React, Context API, JSX, CSS        |
+| Backend    | ASP.NET Core 8.0, Web API           |
+| Database   | SQLite, Entity Framework Core       |
+| Auth       | JWT, Google OAuth                   |
+| Deployment | Render.com (Docker + Blueprint)     |
+| API Docs   | Swagger                             |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🔧 Prerequisites
 
-### `npm run eject`
+- [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download)
+- [Node.js + npm](https://nodejs.org/)
+- Git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🛠️ Clone the repository
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/pradnya-16/Merchandise_Mart.git
+cd Merchandise_Mart
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🖥️ Frontend
 
-## Learn More
+```bash
+cd frontend
+npm install
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Runs on: [http://localhost:3000](http://localhost:3000)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+### 🔙 Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+cd backend
+dotnet restore
+dotnet build
+dotnet run
+```
 
-### Analyzing the Bundle Size
+Runs on: [https://localhost:5001](https://localhost:5001) or [http://localhost:5000](http://localhost:5000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🐳 Deployment (Render)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project uses **Render + Docker** for deployment. It uses:
 
-### Advanced Configuration
+- `backend/Dockerfile` to containerize the app
+- `.render.yaml` to configure a single-service blueprint
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Deployment includes both the frontend (built into `wwwroot`) and the backend in a single containerized app.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📂 Project Structure
 
-### `npm run build` fails to minify
+```
+Merchandise_Mart/
+│
+├── frontend/            # React frontend
+│   ├── public/
+│   └── src/
+│
+├── backend/             # ASP.NET Core backend
+│   ├── Controllers/
+│   ├── Models/
+│   ├── Data/
+│   ├── wwwroot/         # Contains built frontend
+│   └── Program.cs
+│
+├── .render.yaml         # Render blueprint configuration
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📸 Screenshots
+
+| Page | Preview |
+|------|---------|
+| Home | *(Add screenshot here)* |
+| Product Details | *(Add screenshot here)* |
+| Cart/Checkout | *(Add screenshot here)* |
+
+---
+
+## 👩‍💻 Developed By
+
+**Pradnya**  
+Graduate Presidential Scholar  
+M.S. in Computer Science @ DePaul University  
+GitHub: [@pradnya-16](https://github.com/pradnya-16)
+
+---
+
+## 📫 Contact
+
+- 📧 pradnya@example.com *(replace with your email)*
+- 💼 [LinkedIn](https://www.linkedin.com/in/yourprofile)
+
+---
+
+## ⭐ If You Liked This Project
+
+Please consider giving it a ⭐ on GitHub! It helps others discover it too ✨
